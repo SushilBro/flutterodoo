@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="signUP_insert_view_kanban" model="ir.ui.view">
+        <field name="name">signup.insert.view.kanban</field>
+        <field name="model">signup.insert</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="email" />
+                <field name="password" />
+            </kanban>
+        </field>
+    </record>
+    <record id="signUp_insert_view_form" model="ir.ui.view">
+        <field name="name">signup.insert.view.form</field>
+        <field name="model">signup.insert</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                         <field name="email" />
+                         <field name="password" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="signUp_insert_view_tree" model="ir.ui.view">
+        <field name="name">signup.insert.view.tree</field>
+        <field name="model">signup.insert</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                 <field name="email" />
+                 <field name="password" />
+            </tree>
+        </field>
+    </record>
+    <record id="action_samagyan_users" model="ir.actions.act_window">
+        <field name="name">Action Name</field>
+        <field name="res_model">signup.insert</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+    <menuitem
+        id="menu_flutter_root"
+        name="Flutter"
+        sequence="10"/>
+    <menuitem id="menu_users_root" name="Users" parent="menu_flutter_root" sequence="10"/>
+    <menuitem id="menu_users" name="Users" parent="menu_users_root" action="action_samagyan_users" sequence="20"/>
+
+</odoo>
