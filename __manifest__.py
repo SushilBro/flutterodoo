@@ -11,7 +11,7 @@
     'license': 'LGPL-3',
     'data': [
         'security/ir.model.access.csv',
-        'views/signUP_view.xml',
+        'views/signup_view.xml',
     ],
     'demo': [],
     'installable': True,
